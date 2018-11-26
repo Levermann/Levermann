@@ -9,11 +9,10 @@ public class Main
     //Halloooooooooooo
 
     public static void main (String...args){
-        System.out.println("Hi");
         Session session = HibernateUtil.getSession();
         Transaction tx = session.beginTransaction();
 
-     Unternehmen Unternehmen = new Unternehmen();
+        Unternehmen Unternehmen = new Unternehmen();
         Unternehmen.seteigenkapital((float)200.00);
         Unternehmen.setid(2);
         Unternehmen.setjahresueberschuss((float)20000.00);
