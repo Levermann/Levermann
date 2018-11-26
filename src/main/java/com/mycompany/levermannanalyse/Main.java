@@ -13,15 +13,13 @@ public class Main
         Session session = HibernateUtil.getSession();
         Transaction tx = session.beginTransaction();
 
-     /*   Book book = new Book();
-        book.setAuthor("Memorynotfound");
-        book.setTitle("MySQL / Mariadb + Hibernate XML Configuration Example");
-
-        book.setPrice(24.95);
-        book.setYear(2016);
-
-        session.save(book);
-        tx.commit();*/
+     Unternehmen Unternehmen = new Unternehmen();
+        Unternehmen.seteigenkapital((float)200.00);
+        Unternehmen.setid(2);
+        Unternehmen.setjahresueberschuss((float)20000.00);
+      
+        session.save(Unternehmen);
+        tx.commit();
 
         session.close();
         HibernateUtil.shutdown();
