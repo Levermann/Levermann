@@ -9,7 +9,7 @@ public class Main
     //Halloooooooooooo
 
     public static void main (String...args){
-
+        System.out.println("Hi");
         Session session = HibernateUtil.getSession();
         Transaction tx = session.beginTransaction();
 

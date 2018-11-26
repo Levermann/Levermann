@@ -1,16 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-  
+
 <hibernate-mapping>
-    <class name="com.mycompany.levermann" table="TBL_Unternehmen">
-  
- 
+    <class name="com.mycompany.levermannanalyse.hibernate.hibernatedb" table="hibernatedb">
+
+        <id name="id" type="java.lang.Integer" column="ID">
+            <generator class="identity" />
+        </id>
+
         <property name="id" column="ID"/>
-        <property name="eigenkapital" column="Eigenkapital"/>
+        <property name="name" column="NAME"/>
         <property name="jahresueberschuss" column="Jahresueberschuss"/>
-         
- 
-  
+        <property name="eigenkapital" column="EIGENKAPITAL"/>
+
     </class>
 </hibernate-mapping>
