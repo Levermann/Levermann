@@ -5,8 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-//import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-//import org.hibernate.service.ServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.service.ServiceRegistry;
 
 
 public class HibernateUtil {
@@ -17,7 +17,7 @@ public class HibernateUtil {
     static {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
-        } catch (Throwable ex) {
+        } catch (HibernateException ex) {
             throw new ExceptionInInitializerError(ex);
         }
     }
